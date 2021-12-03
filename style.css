@@ -1,0 +1,149 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: #f12711;
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  
+    background: linear-gradient(to right, #f5af19, #f12711); 
+    font-weight: bold;
+}
+.light{
+    transition: 2s;
+    --background:   #ddd;
+}
+.dark{
+    transition: 2s;
+    --background:   #808080;
+}
+.mainBox{
+    width: 300px;
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 20px;
+    background-color: var(--background);
+    border-radius: 20px;
+}
+.clockBox{
+    position: relative;
+    height: 220px;
+    width: 220px;
+    margin: 10px auto;
+    background-color: gold;
+    border-radius: 50%;
+}
+.clockBox::before{
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    /*background-color: var(--background);*/
+    background-image: url("image/l1.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.301);
+}
+.clockBox::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: darkblue;
+}
+.min, .hr, .sec{
+    position: absolute;
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+}
+.min{
+    height: 100px;
+    width: 4px;
+    background-color: black;
+    margin: auto;
+    top: 5%;
+    left: 49%;
+    border-radius: 2%;
+}
+.hr{ height: 70px; 
+    width: 5px; 
+    background-color: black; 
+    margin: auto;
+    top:18%;
+    left: 49%; 
+    border-radius: 2%; 
+}
+.sec{
+    height: 110px;
+    width: 2px;
+    background-color: black;
+    top: 0%;
+    left: 49.5%;
+    border-radius: 2px;
+}
+.med{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    color: black;
+    font-weight: bold;
+}
+.info{
+    margin-top: 50px;
+    text-align: center;
+}
+.digitalHours{
+    font-size: 25px;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.basic{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.basic .city{
+    font-size: 30px;
+    color: black;
+}
+.basic .date{
+    margin-top: 5px;
+    font-size: 15px;
+    color: black;
+}
+.mode{
+    color: 	red;
+    font-size: 35px;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+}
+.clockdate-wrapper {
+    background-color: #333;
+    padding:25px;
+    max-width:350px;
+    width:100%;
+    text-align:center;
+    border-radius:5px;
+    margin:0 auto;
+    margin-top:15%;
+}
